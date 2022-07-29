@@ -1,0 +1,50 @@
+TEST: (g=0): rw=randrw, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=1
+fio-3.30
+Starting 1 process
+
+TEST: (groupid=0, jobs=1): err= 0: pid=1255939: Fri Jul 29 14:40:35 2022
+  read: IOPS=248, BW=994KiB/s (1018kB/s)(58.3MiB/60005msec)
+    slat (nsec): min=4260, max=53840, avg=8146.65, stdev=1955.07
+    clat (usec): min=65, max=3014, avg=98.11, stdev=87.71
+     lat (usec): min=71, max=3023, avg=106.36, stdev=87.83
+    clat percentiles (usec):
+     |  1.00th=[   75],  5.00th=[   80], 10.00th=[   82], 20.00th=[   84],
+     | 30.00th=[   86], 40.00th=[   88], 50.00th=[   90], 60.00th=[   95],
+     | 70.00th=[  100], 80.00th=[  103], 90.00th=[  106], 95.00th=[  112],
+     | 99.00th=[  129], 99.50th=[  334], 99.90th=[ 1778], 99.95th=[ 2089],
+     | 99.99th=[ 2933]
+   bw (  KiB/s): min=  368, max= 1392, per=99.96%, avg=994.47, stdev=199.83, samples=120
+   iops        : min=   92, max=  348, avg=248.62, stdev=49.96, samples=120
+  write: IOPS=247, BW=992KiB/s (1015kB/s)(58.1MiB/60005msec); 0 zone resets
+    slat (nsec): min=7360, max=39060, avg=11337.24, stdev=1579.85
+    clat (usec): min=17, max=10257, avg=26.11, stdev=89.54
+     lat (usec): min=26, max=10297, avg=37.57, stdev=89.87
+    clat percentiles (usec):
+     |  1.00th=[   20],  5.00th=[   21], 10.00th=[   21], 20.00th=[   22],
+     | 30.00th=[   23], 40.00th=[   24], 50.00th=[   25], 60.00th=[   26],
+     | 70.00th=[   27], 80.00th=[   28], 90.00th=[   30], 95.00th=[   31],
+     | 99.00th=[   34], 99.50th=[   36], 99.90th=[  103], 99.95th=[  225],
+     | 99.99th=[ 2900]
+   bw (  KiB/s): min=  504, max= 1168, per=99.95%, avg=991.60, stdev=166.93, samples=120
+   iops        : min=  126, max=  292, avg=247.90, stdev=41.73, samples=120
+  lat (usec)   : 20=2.47%, 50=47.38%, 100=35.63%, 250=14.22%, 500=0.08%
+  lat (usec)   : 750=0.05%, 1000=0.03%
+  lat (msec)   : 2=0.09%, 4=0.04%, 20=0.01%
+  fsync/fdatasync/sync_file_range:
+    sync (nsec): min=20, max=3170, avg=83.08, stdev=58.74
+    sync percentiles (nsec):
+     |  1.00th=[   20],  5.00th=[   20], 10.00th=[   30], 20.00th=[   30],
+     | 30.00th=[   40], 40.00th=[   40], 50.00th=[   90], 60.00th=[  110],
+     | 70.00th=[  120], 80.00th=[  131], 90.00th=[  151], 95.00th=[  161],
+     | 99.00th=[  181], 99.50th=[  201], 99.90th=[  310], 99.95th=[  532],
+     | 99.99th=[ 2480]
+  cpu          : usr=0.14%, sys=4.21%, ctx=110001, majf=0, minf=13
+  IO depths    : 1=200.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=14917,14874,0,29788 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=994KiB/s (1018kB/s), 994KiB/s-994KiB/s (1018kB/s-1018kB/s), io=58.3MiB (61.1MB), run=60005-60005msec
+  WRITE: bw=992KiB/s (1015kB/s), 992KiB/s-992KiB/s (1015kB/s-1015kB/s), io=58.1MiB (60.9MB), run=60005-60005msec
