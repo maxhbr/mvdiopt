@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
          tee -a /vagrant/#{VERSION}-Mixed-random-4K-read-and-write
        mount > /vagrant/#{VERSION}.mount
        cat /etc/fstab > /vagrant/#{VERSION}.fstab
-       dmesg > /vagrant/#{VERSION}.fstab
+       dmesg > /vagrant/#{VERSION}.dmesg
      SHELL
     end
 end
