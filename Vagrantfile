@@ -2,6 +2,9 @@ BOX="magmacore/magma_dev"
 # VERSION="1.1.20210618"
 VERSION="1.1.20220727"
 
+# BOX="magma-dev-noansible"
+# VERSION="magma-dev-noansible"
+
 # BOX="ubuntu/focal64"
 # VERSION="v20220724.0.0"
 
